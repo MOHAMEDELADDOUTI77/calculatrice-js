@@ -1,23 +1,17 @@
 const display = document.getElementById("display");
 
 function append(value){
-display.value += value;
+    display.value += value;
 }
 
 function clearDisplay(){
-display.value = "";
+    display.value = "";
 }
 
 function calculate(){
-
-try{
-display.value = eval(display.value);
-}
-
-catch{
-
-display.value = "Erreur";
-
-}
-
+    try{
+        display.value = eval(display.value);
+    } catch {
+        display.value = "Erreur";
+    }
 }
